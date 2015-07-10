@@ -31,7 +31,7 @@ var KA_LL = {
 			} else {
 				localStorage.clear();
 			}},
-		remove: function() {
+		remove: function(key, value) {
 			if (KA_LL.onKA) {
 				sessionStorage.removeItem(key, value);
 			} else {
