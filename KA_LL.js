@@ -80,6 +80,6 @@ var KA_LL = {
 			}
 		};
 		return theFunction;    
-	};
+	}
 };
 
