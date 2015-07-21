@@ -64,5 +64,22 @@ var KA_LL = {
 				theList.appendChild(theList.children[Math.random() * i | 0]);
 			}
 		}
-	}
+	},
+	objSort: function(key, ordering) {
+		// returns a function to be passed to Array.sort()
+		// that sorts an array of objects by a given key
+		// pass -1 as second param for reverse order
+		ordering = ordering || 1;
+		var theFunction = function(a, b) {
+			if (a[key] < b[key]) {
+				return -1 * ordering;
+			} else if (a[key] === b[key]) {
+				return 0;
+			} else {
+				return 1 * ordering;
+			}
+		};
+		return theFunction;    
+	};
 };
+
